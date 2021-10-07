@@ -26,6 +26,7 @@ export default NextAuth({
     Providers.Facebook({
       clientId: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_SECRET,
+     
     }),
     // Providers.GitHub({
     //   clientId: process.env.GITHUB_ID,
@@ -36,6 +37,7 @@ export default NextAuth({
     Providers.Google({
       clientId: process.env.GOOGLE_ID,
       clientSecret: process.env.GOOGLE_SECRET,
+      redirect_uri: process.env.GOOGLE_REDIRECT
     }),
     // Providers.Twitter({
     //   clientId: process.env.TWITTER_ID,
@@ -106,9 +108,9 @@ export default NextAuth({
   // when an action is performed.
   // https://next-auth.js.org/configuration/callbacks
   callbacks: {
-    async signIn(user, account, profile) { return true },
+    async signIn(user, account, profile, email, credentials) { return true },
     async redirect(url, baseUrl) { return baseUrl },
-    async session(session, user) { return session },
+    async session(session, user, token) { return session },
     async jwt(token, user, account, profile, isNewUser) { return token }
   },
 
