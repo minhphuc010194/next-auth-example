@@ -7,7 +7,7 @@
   "bugs": {
     "url": "https://github.com/minhphuc010194/next-auth-example/issues"
   },
-  "homepage": "https://next-auth-example-topaz.vercel.app",
+  "homepage": "https://next-auth-for-learn-english-axvm5p2cr-minhphuc010194.vercel.app",
   "main": "",
   "scripts": {
     "dev": "next",
