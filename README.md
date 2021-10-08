@@ -1,5 +1,5 @@
 
-[DEMO](https://next-auth-for-learn-english-axvm5p2cr-minhphuc010194.vercel.app)
+[DEMO](https://next-auth-for-learn-english.vercel.app)
 
 ### 1. Start the application
 
